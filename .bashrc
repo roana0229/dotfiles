@@ -15,6 +15,10 @@ alias vibashp='vim ~/.bash_profile'
 alias rebash='source ~/.bashrc'
 alias rebashp='source ~/.bash_profile'
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 if [ -r /usr/local/git/contrib/completion/.git-completion.bash ]; then
   # terminal show branch name
   # source /usr/local/git/contrib/completion/.git-completion.bash

@@ -44,7 +44,3 @@ export PATH=$PATH:$JAVA_HOME/bin:$NXJ_HOME/bin
 
 # postgreSQL
 export PGDATA=/usr/local/var/postgres
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
