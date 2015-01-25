@@ -1,0 +1,2 @@
+#nfs mount
+alias nfsmount='sudo mount -t nfs -o resvport 192.168.56.102:/nfs_dir /Users/kaoru/nfs_dir'
