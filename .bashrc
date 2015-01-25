@@ -15,7 +15,7 @@ alias vibashp='vim ~/.bash_profile'
 alias rebash='source ~/.bashrc'
 alias rebashp='source ~/.bash_profile'
 
-if [ -r /usr/local/git/contrib/completion/git-completion.bash ]; then
+if [ -r /usr/local/git/contrib/completion/.git-completion.bash ]; then
   # terminal show branch name
   # source /usr/local/git/contrib/completion/.git-completion.bash
   GIT_PS1_SHOWDIRTYSTATE=true
