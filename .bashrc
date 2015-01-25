@@ -27,7 +27,3 @@ if [ -r /usr/local/git/contrib/completion/.git-completion.bash ]; then
 else
   export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[33m\]\w\[\033[31m\]\[\033[00m\]\$ '
 fi
-
-
-#nfs mount
-alias nfsmount='sudo mount -t nfs -o resvport 192.168.56.102:/nfs_dir /Users/kaoru/nfs_dir'
