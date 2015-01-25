@@ -15,9 +15,15 @@ alias vibashp='vim ~/.bash_profile'
 alias rebash='source ~/.bashrc'
 alias rebashp='source ~/.bash_profile'
 
+## brew install bash-completion
 # if [ -f $(brew --prefix)/etc/bash_completion ]; then
 #   . $(brew --prefix)/etc/bash_completion
 # fi
+
+## yum install bash-completion
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
 
 if [ -r /usr/local/git/contrib/completion/.git-completion.bash ]; then
   # terminal show branch name
