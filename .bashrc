@@ -15,6 +15,13 @@ alias vibashp='vim ~/.bash_profile'
 alias rebash='source ~/.bashrc'
 alias rebashp='source ~/.bash_profile'
 
+function synx_pod() {
+  rm -rf Pods Podfile.lock;
+  synx -p $1.xcodeproj/;
+  pod install;
+  open $1.xcworkspace
+}
+
 ## brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
