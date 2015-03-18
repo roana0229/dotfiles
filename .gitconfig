@@ -1,3 +1,5 @@
 [user]
 	name = Kaoru Tsutsumishita
 	email = t.kaoru.kit@gmail.com
+[url "git@github.com:"]
+	pushinsteadof = https://github.com/
