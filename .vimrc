@@ -5,6 +5,7 @@ set number
 set ruler
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
+set paste
 set incsearch
 set hlsearch
 set nowrap
