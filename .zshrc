@@ -116,6 +116,3 @@ zstyle ':completion:*:default' menu select=1
 # ここではデフォルトのセットから / を抜いたものとする
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

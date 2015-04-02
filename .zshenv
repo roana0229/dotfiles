@@ -16,3 +16,6 @@ export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
 
 # postgres
 export PGDATA=/usr/local/var/postgres
+
+# Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
