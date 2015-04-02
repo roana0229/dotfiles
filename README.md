@@ -6,6 +6,3 @@
 
 ## link
 `sudo sh ~/dotfiles/link.sh`
-
-## link in Vagrant
-`sudo sh ~/dotfiles/link_vagrant.sh`
