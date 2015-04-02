@@ -115,3 +115,7 @@ zstyle ':completion:*:default' menu select=1
 # 単語の一部として扱われる文字のセットを指定する
 # ここではデフォルトのセットから / を抜いたものとする
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

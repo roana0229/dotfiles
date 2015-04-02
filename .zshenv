@@ -10,3 +10,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # java classpath
 export CLASSPATH=./
+
+# Andoid Studio
+export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
+
+# postgres
+export PGDATA=/usr/local/var/postgres
