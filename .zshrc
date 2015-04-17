@@ -78,21 +78,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"i
 
-alias ll='ls -l'
-alias la='ls -la'
-alias vi='vim'
-alias vizsh='vim ~/.zshrc'
-alias vizshe='vim ~/.zshenv'
-alias rezsh='source ~/.zshrc'
-alias rezshe='source ~/.zshenv'
-
-function synxpod() {
-  rm -rf Pods Podfile.lock;
-  synx -p $1.xcodeproj/;
-  pod install;
-  open $1.xcworkspace
-}
-
 # 入力したコマンドが存在せず、かつディレクトリ名と一致するなら、ディレクトリに cd する
 # 例： /usr/bin と入力すると /usr/bin ディレクトリに移動
 setopt auto_cd
@@ -115,4 +100,25 @@ zstyle ':completion:*:default' menu select=1
 # 単語の一部として扱われる文字のセットを指定する
 # ここではデフォルトのセットから / を抜いたものとする
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+alias ll='ls -l'
+alias la='ls -la'
+alias vi='vim'
+alias vizsh='vim ~/.zshrc'
+alias vizshe='vim ~/.zshenv'
+alias rezsh='source ~/.zshrc'
+alias rezshe='source ~/.zshenv'
+alias vimeuc='vim -c "e ++enc=euc-jp"'
+alias goapp='/Applications/google-cloud-sdk/platform/google_appengine/goapp'
+
+# ssh ForwardAgent
+ssh-add &> /dev/null
+
+function synxpod() {
+  rm -rf Pods Podfile.lock;
+  synx -p $1.xcodeproj/;
+  pod install;
+  open $1.xcworkspace
+}
+
+# create git ignore
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}

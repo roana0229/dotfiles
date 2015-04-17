@@ -18,4 +18,12 @@ export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
 export PGDATA=/usr/local/var/postgres
 
 # Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=/usr/local/heroku/bin:$PATH
+
+# go
+export GOPATH=$HOME/_go
+export GOROOT=/usr/local/go
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+export PATH=/Applications/google-cloud-sdk/bin:$PATH
