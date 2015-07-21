@@ -120,5 +120,15 @@ function synxpod() {
   open $1.xcworkspace
 }
 
-# create git ignore
+## create git ignore
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+# history
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=100000
+
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
