@@ -1,8 +1,10 @@
 # roana0229 dotfiles
 
-## init
+## init for mac
 Must installed Ruby `ruby -v`
 
-intstalling git tig zsh oh-my-zsh, and vim color-scheme neobundle
+intstalling git tig brew-cask zsh oh-my-zsh, and vim color-scheme neobundle
 
-`sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
+1. execute `xcode-select --install` after show dialog
+
+2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`

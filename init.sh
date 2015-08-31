@@ -1,6 +1,6 @@
 # brew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
-brew install zsh git tig;
+brew install zsh git tig caskroom/cask/brew-cask;
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
