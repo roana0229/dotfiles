@@ -3,5 +3,11 @@
 ## init
 Must installed Ruby `ruby -v`
 
-intstall zsh git tig;
+intstalling zsh git tig vim-neobundle
+
 `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
+
+
+## vim color
+
+`sh ~/dotfiles/init-vim-color.sh`
