@@ -37,6 +37,8 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" for replase: vim color setting
+
 syntax on
 set title
 set smartindent
