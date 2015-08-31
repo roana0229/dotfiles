@@ -108,17 +108,9 @@ alias vizshe='vim ~/.zshenv'
 alias rezsh='source ~/.zshrc'
 alias rezshe='source ~/.zshenv'
 alias vimeuc='vim -c "e ++enc=euc-jp"'
-alias goapp='/Applications/google-cloud-sdk/platform/google_appengine/goapp'
 
 # ssh ForwardAgent
 ssh-add &> /dev/null
-
-function synxpod() {
-  rm -rf Pods Podfile.lock;
-  synx -p $1.xcodeproj/;
-  pod install;
-  open $1.xcworkspace
-}
 
 ## create git ignore
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
