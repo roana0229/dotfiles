@@ -2,7 +2,7 @@
 
 ## About
 
-Easily to build a minimum of development environment for mac.
+Easily to build a minimum of development environment for mac.  
 You must have installed Ruby and Xcode.
 
 
@@ -27,6 +27,5 @@ You must have installed Ruby and Xcode.
 
 ## Installation
 
-1. `xcode-select --install` after show dialog.
-
+1. `xcode-select --install` after show dialog.  
 2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
