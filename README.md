@@ -10,11 +10,12 @@ You must have installed Ruby and Xcode.
 
 * Homebrew
 * zsh
+* oh-my-zsh
 * git
 * tig
 * tmux
-* oh-my-zsh
 * color-scheme neobundle (vim)
+* translate-shell(command: trans)
 * brew-cask
 * dropbox
 * google-chrome
