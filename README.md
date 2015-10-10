@@ -14,6 +14,7 @@ You must have installed Ruby and Xcode.
 * git
 * tig
 * tmux
+* td(terminal todo)
 * color-scheme neobundle (vim)
 * translate-shell(command: trans)
 * brew-cask
