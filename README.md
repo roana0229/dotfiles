@@ -2,20 +2,26 @@
 
 ## About
 
-Easily to build a minimum of development environment for mac.  
-You must have installed Ruby and Xcode.
+Easily to build a minimum of development environment for mac and linux.
 
 
 ## Features
 
-* Homebrew
 * zsh
 * oh-my-zsh
 * git
 * tig
 * tmux
-* td(terminal todo)
 * color-scheme neobundle (vim)
+
+Only Linux
+
+* vim-enhanced
+
+Only Mac
+
+* Homebrew
+* td(terminal todo)
 * translate-shell(command: trans)
 * brew-cask
 * dropbox
@@ -26,8 +32,7 @@ You must have installed Ruby and Xcode.
 * bettertouchtool
 * atom
 
-
 ## Installation
 
-1. `xcode-select --install` after show dialog.  
+1. If you install for Mac, `xcode-select --install` after show dialog.  
 2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
