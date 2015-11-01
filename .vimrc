@@ -39,8 +39,8 @@ filetype plugin indent on
 NeoBundleCheck
 
 syntax enable
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 let g:solarized_termcolors=256
 
 syntax on
@@ -69,3 +69,5 @@ set helplang=en
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 nnoremap <ESC><ESC> :nohlsearch<CR>
+
+autocmd vimenter * NERDTree
