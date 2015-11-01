@@ -71,3 +71,4 @@ set grepprg=grep\ -nh
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 autocmd vimenter * NERDTree
+autocmd VimEnter * wincmd p
