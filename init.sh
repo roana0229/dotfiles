@@ -10,7 +10,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm;
   yum check-update;
   yum update;
-  yum install -y zsh git tig tmux;
+  yum install -y vim-enhanced zsh git tig tmux;
 fi
 
 # oh-my-zsh
