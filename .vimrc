@@ -1,14 +1,16 @@
+if 0 | endif
+
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
   endif
 
   " Required:
-  set runtimepath+=/Users/kaoru/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/kaoru/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
