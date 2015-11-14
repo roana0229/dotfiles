@@ -32,7 +32,7 @@ Only Mac
 * bettertouchtool
 * atom
 
-## Installation
+## Install
 
 1. If you install for Mac, `xcode-select --install` after show dialog.  
 2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
