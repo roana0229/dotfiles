@@ -20,8 +20,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 git clone https://github.com/roana0229/dotfiles.git ~/dotfiles;
 cp ~/dotfiles/simple-git.zsh-theme ~/.oh-my-zsh/themes/simple-git.zsh-theme;
 sudo sh ~/dotfiles/link.sh;
-source ~/.zshenv;
-source ~/.zshrc;
 
 # neobundle
 sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/install.sh)";
