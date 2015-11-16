@@ -18,7 +18,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # dotfiles
 git clone https://github.com/roana0229/dotfiles.git ~/dotfiles;
-cp ~/dotfiles/simple-git.zsh-theme ~/.oh-my-zsh/themes/simple-git.zsh-theme;
+cp -rf ~/dotfiles/simple-git.zsh-theme ~/.oh-my-zsh/themes/simple-git.zsh-theme;
+cp -rf ~/dotfiles/tmux-theme-default.sh ~/dotfiles/tmux-powerline/themes/default.sh;
 sudo sh ~/dotfiles/link.sh;
 
 # neobundle
