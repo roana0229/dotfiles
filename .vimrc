@@ -142,16 +142,10 @@ set shiftwidth=2 " 自動で挿入されるインデントのスペース幅
 noremap <C-a> $
 noremap <C-i> 0
 noremap gx <Plug>(openbrowser-smart-search)
+noremap <C-t> :NERDTreeToggle<CR>
 
 " mode: normal
 nnoremap <Leader>i gg=<S-g><C-o><C-o>zz " 全体インデント整形
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap ; :
 nnoremap : ;
-
-
-" ******************
-" Run with command
-" ******************
-autocmd vimenter * NERDTree
-autocmd vimenter * wincmd p
