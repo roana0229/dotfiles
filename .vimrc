@@ -33,6 +33,9 @@ NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'moll/vim-node'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/syntastic'
 
 
 " You can specify revision/branch/tag.
@@ -68,14 +71,15 @@ nmap s <Plug>(easymotion-s2)
 
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
-let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+let g:EasyMotion_keys='asdzxcqwefghvbnrtyjklmuiopASDZXCQWEFGHVBNRTYKLMIOP'
+" let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
 
 
 " ******************
 " neocomplcache
 " ******************
 " Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
+let g:acp_enableAtStartup = 1
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
@@ -114,6 +118,22 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 " open browser
 let g:netrw_nogx = 1
+
+" js syntax check
+let g:syntastic_check_on_open=0 "ファイルを開いたときはチェックしない
+let g:syntastic_check_on_save=1 "保存時にはチェック
+let g:syntastic_check_on_wq = 0 " wqではチェックしない
+let g:syntastic_auto_loc_list=1 "エラーがあったら自動でロケーションリストを開く
+let g:syntastic_loc_list_height=6 "エラー表示ウィンドウの高さ
+" set statusline+=%#warningmsg# "エラーメッセージの書式
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+let g:syntastic_javascript_checkers = ['eslint'] "ESLintを使う
+let g:syntastic_mode_map = {
+      \ 'mode': 'active',
+      \ 'active_filetypes': ['javascript'],
+      \ 'passive_filetypes': []
+      \ }
 
 syntax on
 set laststatus=2 " ステータスラインを下部に表示
