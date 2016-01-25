@@ -1,5 +1,6 @@
 {
     "extends": "eslint:recommended",
+    "strict": 2,
     "env": {
         "browser": true,
         "node": true,
@@ -24,5 +25,7 @@
         "prefer-spread": 2,
         "prefer-template": 2,
         "require-yield": 2,
+        "no-unused-vars": [2, {"argsIgnorePattern": "^_"}],
+        "no-console": 0
     }
 }
