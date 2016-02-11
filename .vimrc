@@ -1,11 +1,12 @@
 " ******************
 " NeoBundle
 " ******************
+" Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
 if has('vim_starting')
   if &compatible
-    set nocompatible               " Be iMproved
+    set nocompatible
   endif
 
   " Required:
@@ -72,7 +73,6 @@ nmap s <Plug>(easymotion-s2)
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_keys='asdzxcqwefghvbnrtyjklmuiopASDZXCQWEFGHVBNRTYKLMIOP'
-" let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
 
 
 " ******************
@@ -105,16 +105,21 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
+" markdown preview
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " ******************
 " Customize
 " ******************
+
 let mapleader = "\<Space>"
 let g:solarized_termcolors=256
 
-" markdown preview
-au BufRead,BufNewFile *.md set filetype=markdown
+" undo
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
 
 " open browser
 let g:netrw_nogx = 1
@@ -165,7 +170,7 @@ noremap gx <Plug>(openbrowser-smart-search)
 noremap <C-t> :NERDTreeToggle<CR>
 
 " mode: normal
-nnoremap <Leader>i gg=<S-g><C-o><C-o>zz " 全体インデント整形
+nnoremap <Leader>i gg=<S-g><C-o><C-o>zz
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap ; :
 nnoremap : ;

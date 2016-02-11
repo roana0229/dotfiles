@@ -28,6 +28,9 @@ sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/insta
 # vim color
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/osx-terminal.app-colors-solarized;
 
+# vim undo
+mkdir -p ~/.vim/undo
+
 if [ "$(uname)" == 'Darwin' ]; then # Mac
   echo "\n---- terminal color setting ----";
   echo "Load terminal color profile in ~/osx-terminal.app-colors-solarized at Terminal Setting";
