@@ -109,8 +109,8 @@ alias vizshe='vim ~/.zshenv'
 alias rezsh='source ~/.zshrc'
 alias rezshe='source ~/.zshenv'
 alias vimeuc='vim -c "e ++enc=euc-jp"'
-alias pjson='python -m json.tool'
-alias pjsonj='python -c "import sys,json;print json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False)"'
+alias jsonp='python -m json.tool'
+alias jsonpj='python -c "import sys,json;print json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False)"'
 
 # ssh ForwardAgent
 ssh-add &> /dev/null
