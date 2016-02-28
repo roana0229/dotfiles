@@ -5,7 +5,6 @@ if [ "$(uname)" == 'Darwin' ]; then # Mac
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
   brew doctor;
   brew install zsh git tig tmux caskroom/cask/brew-cask;
-  brew install http://www.soimort.org/translate-shell/translate-shell.rb;
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm;
   yum check-update;
