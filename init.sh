@@ -4,7 +4,7 @@ if [ "$(uname)" == 'Darwin' ]; then # Mac
   # brew
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
   brew doctor;
-  brew install zsh git tig tmux caskroom/cask/brew-cask td;
+  brew install zsh git tig tmux caskroom/cask/brew-cask;
   brew install http://www.soimort.org/translate-shell/translate-shell.rb;
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm;
@@ -25,13 +25,13 @@ sudo sh ~/dotfiles/link.sh;
 # neobundle
 sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/install.sh)";
 
-# vim color
-git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/osx-terminal.app-colors-solarized;
-
 # vim undo
 mkdir -p ~/.vim/undo
 
 if [ "$(uname)" == 'Darwin' ]; then # Mac
+  # vim color
+  git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/osx-terminal.app-colors-solarized;
+
   echo "\n---- terminal color setting ----";
   echo "Load terminal color profile in ~/osx-terminal.app-colors-solarized at Terminal Setting";
 
