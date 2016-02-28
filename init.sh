@@ -30,6 +30,8 @@ mkdir -p ~/.vim/undo
 if [ "$(uname)" == 'Darwin' ]; then # Mac
   # vim color
   git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/osx-terminal.app-colors-solarized;
+  # tmux-powerline
+  git clone https://github.com/erikw/tmux-powerline.git ~/dotfiles/tmux-powerline
 
   echo "\n---- terminal color setting ----";
   echo "Load terminal color profile in ~/osx-terminal.app-colors-solarized at Terminal Setting";
