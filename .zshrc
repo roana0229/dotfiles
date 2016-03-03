@@ -112,6 +112,14 @@ alias vimeuc='vim -c "e ++enc=euc-jp"'
 alias jsonp='python -m json.tool'
 alias jsonpj='python -c "import sys,json;print json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False)"'
 
+# generate password and copy to clipboard
+function createpw() {
+  local pass=`pwgen $1 1 -s -B`
+  echo 'create password: '$pass
+  echo $pass | tr -d '\n' | pbcopy
+  echo 'copied to clipboard'
+}
+
 # ssh ForwardAgent
 ssh-add &> /dev/null
 
