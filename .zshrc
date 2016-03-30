@@ -112,6 +112,10 @@ alias vimeuc='vim -c "e ++enc=euc-jp"'
 alias jsonp='python -m json.tool'
 alias jsonpj='python -c "import sys,json;print json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False)"'
 
+# direnv
+export EDITOR='vim'
+eval "$(direnv hook zsh)"
+
 # generate password and copy to clipboard
 function createpw() {
   local pass=`pwgen $1 1 -s -B`
