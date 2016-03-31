@@ -25,8 +25,8 @@ Easily to build a minimum of development environment for mac and linux.
 
 ### HomeBrew Formulas (OSX)
 
-1. `sh install_brew_list.sh`;
-2. `sh install_brew_cask_list.sh`;
+1. `sh install_brew_list.sh;`
+2. `sh install_brew_cask_list.sh;`
 
 
 ## Update
