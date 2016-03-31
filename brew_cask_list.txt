@@ -1,0 +1,17 @@
+android-studio
+atom
+bettertouchtool
+cocoapods
+dash
+dropbox
+firefox
+genymotion
+google-chrome
+google-japanese-ime
+gyazo
+insomniax
+keyboard-cleaner
+skype
+vagrant
+virtualbox
+vlc

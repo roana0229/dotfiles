@@ -12,30 +12,22 @@ Easily to build a minimum of development environment for mac and linux.
 * git
 * tig
 * tmux
-* color-scheme neobundle (vim)
+* color-scheme, neobundle (vim)
+* vim-enhanced (Only Linux)
 
-Only Linux
-
-* vim-enhanced
-
-Only Mac
-
-* Homebrew
-* td(terminal todo)
-* translate-shell(command: trans)
-* brew-cask
-* dropbox
-* google-chrome
-* virtualbox
-* vagrant
-* kobito
-* bettertouchtool
-* atom
 
 ## Install
 
+### Base
+
 1. If you install for Mac, `xcode-select --install` after show dialog.  
 2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
+
+### HomeBrew Formulas (OSX)
+
+1. `sh install_brew_list.sh`;
+2. `sh install_brew_cask_list.sh`;
+
 
 ## Update
 
