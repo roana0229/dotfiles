@@ -14,6 +14,7 @@ libevent
 libpng
 libtiff
 libtool
+lua
 mplayer
 nodebrew
 openssl
@@ -28,5 +29,6 @@ ruby-build
 the_silver_searcher
 tig
 tmux
+vim
 xz
 zsh
