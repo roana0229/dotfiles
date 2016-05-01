@@ -90,6 +90,11 @@ set shiftwidth=2 " 自動で挿入されるインデントのスペース幅
 set noswapfile " swpファイルを作成しない
 set backup " バックアップファイルを作成
 set backupdir=/tmp " バックアップファイルのパス
+set scrolloff=5 " スクロール時に余裕を持たせる
+set colorcolumn=80 " カラムライン
+set cursorline " 現在の行をハイライト
+hi clear CursorLine " 行番号のみハイライト
+autocmd BufWritePre * :%s/\s\+$//ge " 保存時に行末の空白を削除
 
 " mode: normal + visual
 noremap <C-a> $
