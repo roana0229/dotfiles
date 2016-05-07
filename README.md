@@ -13,14 +13,14 @@ Easily to build a minimum of development environment for mac and linux.
 * tig
 * tmux
 * color-scheme, neobundle (vim)
-* vim-enhanced (Only Linux)
+* vim with lua
 
 
 ## Install
 
 ### Base
 
-1. If you install for Mac, `xcode-select --install` after show dialog.  
+1. If you install for Mac, `xcode-select --install` after show dialog.
 2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
 
 ### HomeBrew Formulas (OSX)
