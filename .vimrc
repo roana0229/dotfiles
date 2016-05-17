@@ -130,7 +130,7 @@ vmap gx <Plug>(openbrowser-open)
 
 " markdown preview
 autocmd BufRead,BufNewFile *.md set filetype=markdown
-
+let g:vim_markdown_folding_disabled=1
 
 " ******************
 " EasyMotion
