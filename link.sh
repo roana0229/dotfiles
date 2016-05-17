@@ -1,13 +1,13 @@
 #!/bin/bash
 
-ln -sf ~/dotfiles/.zshenv ~/.zshenv
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+for f in .??*
+do
+  if [ "$f" == ".git" -o "$f" == ".gitignore" ]; then
+    continue
+  fi
 
-source ~/.zshenv;
-source ~/.zshrc;
-source ~/.vimrc;
-source ~/.tmux.conf;
-source ~/.gitconfig;
+  ln -sf ~/dotfiles/$f ~/$f
+  if [ "$f" == ".zshenv" -o "$f" == ".zshrc" ]; then
+    source ~/$f;
+  fi
+done

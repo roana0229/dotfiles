@@ -21,7 +21,7 @@ Easily to build a minimum of development environment for mac and linux.
 ### Base
 
 1. If you install for Mac, `xcode-select --install` after show dialog.
-2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/init.sh)";`
+2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/install.sh)";`
 
 ### HomeBrew Formulas (OSX)
 
