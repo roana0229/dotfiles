@@ -21,7 +21,7 @@ Easily to build a minimum of development environment for mac and linux.
 ### Base
 
 1. If you install for Mac, `xcode-select --install` after show dialog.
-2. `sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/install.sh)";`
+2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/install.sh)";`
 
 ### HomeBrew Formulas (OSX)
 
@@ -37,4 +37,5 @@ Easily to build a minimum of development environment for mac and linux.
 
 ## vim only for linux
 
-`sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/install_vim_for_linux.sh)";`
+1. `curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/install_vim_for_linux.sh > /tmp/vim_setup.sh`
+2. `sudo sh /tmp/vim_setup.sh user`

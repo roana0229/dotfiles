@@ -16,6 +16,7 @@ sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/insta
 # create undo history dir
 mkdir -p /root/.vim/undo
 mkdir -p /home/$1/.vim/undo
+chown $1 /home/$1/.vim
 
 # clone vim color scheme
 git clone git://github.com/altercation/vim-colors-solarized.git /root/.vim/bundle
