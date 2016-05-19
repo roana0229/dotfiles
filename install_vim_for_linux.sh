@@ -8,7 +8,7 @@ fi
 
 yum check-update;
 yum update;
-yum install -y vim-nox;
+yum install -y vim-nox git;
 
 # install neobundle
 sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/install.sh)";
