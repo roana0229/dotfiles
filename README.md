@@ -34,3 +34,7 @@ Easily to build a minimum of development environment for mac and linux.
 1. `cd ~/dotfiles`
 2. `git pull origin master`
 3. `sudo sh link.sh`
+
+## vim only for linux
+
+`sh -c "$(curl -fsSL https://rawgit.com/roana0229/dotfiles/master/install_vim_for_linux.sh)";`

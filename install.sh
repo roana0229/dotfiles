@@ -31,8 +31,7 @@ sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/insta
 mkdir -p ~/.vim/undo
 
 # vim color
-cd ~/.vim/bundle
-git clone git://github.com/altercation/vim-colors-solarized.git
+git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
 
 if [ "$(uname)" == 'Darwin' ]; then
   # terminal color
