@@ -38,4 +38,4 @@ Easily to build a minimum of development environment for mac and linux.
 ## vim only for linux
 
 1. `curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/install_vim_for_linux.sh > /tmp/vim_setup.sh`
-2. `sudo sh /tmp/vim_setup.sh user`
+2. `sh /tmp/vim_setup.sh`
