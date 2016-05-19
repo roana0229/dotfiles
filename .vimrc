@@ -29,7 +29,6 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
@@ -41,6 +40,8 @@ NeoBundle 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-dispatch'
 
 
 NeoBundle 'Shougo/vimproc.vim', {
@@ -131,6 +132,12 @@ vmap gx <Plug>(openbrowser-open)
 " markdown preview
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 let g:vim_markdown_folding_disabled=1
+
+" vim-rspec
+" RSpec.vim mappings
+nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 
 " ******************
 " EasyMotion
