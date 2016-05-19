@@ -37,4 +37,5 @@ Easily to build a minimum of development environment for mac and linux.
 
 ## vim only for linux
 
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/install_vim_for_linux.sh > /tmp/vim_setup.sh)";`
+1. `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/setup_vim_for_linux.sh)";`
+2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/install_vim_for_linux.sh)";`
