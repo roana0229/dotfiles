@@ -25,15 +25,15 @@ Easily to build a minimum of development environment for mac and linux.
 
 ### HomeBrew Formulas (OSX)
 
-1. `sh install_brew_list.sh;`
-2. `sh install_brew_cask_list.sh;`
+1. `sh ~/dotfiles/brew/install_brew_list.sh;`
+2. `sh ~/dotfiles/brew/install_brew_cask_list.sh;`
 
 
 ## Update
 
 1. `cd ~/dotfiles`
 2. `git pull origin master`
-3. `sudo sh link.sh`
+3. `sh link.sh`
 
 ## only vim
 
