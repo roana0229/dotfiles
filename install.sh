@@ -5,44 +5,44 @@ if [ "$(uname)" != 'Darwin' ]; then # OSX
   exit 1;
 fi
 
-echo "# install Homebrew"
+echo "# install Homebrew";
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
 brew update;
 brew doctor;
 brew install zsh git tig tmux caskroom/cask/brew-cask;
-brew install vim --with-lua
+brew install vim --with-lua;
 
-echo "# install oh-my-zsh"
+echo "# install oh-my-zsh";
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
 
-echo "# install dotfiles"
+echo "# install dotfiles";
 git clone https://github.com/roana0229/dotfiles.git ~/dotfiles;
 cp -f ~/dotfiles/simple-git.zsh-theme ~/.oh-my-zsh/themes/simple-git.zsh-theme;
 sh ~/dotfiles/link.sh;
 
-echo "# install NeoBundle"
+echo "# install NeoBundle";
 sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/install.sh)";
 
 # vim undo
-mkdir -p ~/.vim/undo
+mkdir -p ~/.vim/undo;
 
-echo "# install vim color-solarized"
-git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
+echo "# install vim color-solarized";
+git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle;
 
-echo "# install terminal color-solarized"
+echo "# install terminal color-solarized";
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/osx-terminal.app-colors-solarized;
 echo "\n### terminal color setting ###";
 echo "# Load terminal color profile in ~/osx-terminal.app-colors-solarized at Terminal Setting";
 
-echo "vim_path=\`brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//'\`" >> .zshenv
-echo "export PATH=/\$vim_path/bin:\$PATH" >> .zshenv
+echo "vim_path=\`brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//'\`" >> .zshenv;
+echo "export PATH=/\$vim_path/bin:\$PATH" >> .zshenv;
 
 echo "# install tmux-powerline"
-git clone https://github.com/erikw/tmux-powerline.git ~/tmux-powerline
+git clone https://github.com/erikw/tmux-powerline.git ~/tmux-powerline;
 cp -f ~/dotfiles/tmux/tmux-theme-default.sh ~/tmux-powerline/themes/default.sh;
 cp -f ~/dotfiles/tmux/weather.sh ~/tmux-powerline/segments/weather.sh;
 
-echo "# add zsh shells"
+echo "# add zsh shells";
 sudo echo "/usr/local/bin/zsh" >> /etc/shells;
 
 echo "#######################################";
