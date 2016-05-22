@@ -37,10 +37,12 @@ Easily to build a minimum of development environment for mac and linux.
 
 ## only vim
 
-* centos
-  1. `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_centos.sh)";`
-  2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/install_vim_for_linux.sh)";`
+1. 
 
-* debian
-  1. `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_debian.sh)";`
-  2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/install_vim_for_linux.sh)";`
+  * centos
+  `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_centos.sh)";`
+
+  * debian
+  `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_debian.sh)";`
+
+2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/install.sh)";`
