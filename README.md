@@ -35,7 +35,12 @@ Easily to build a minimum of development environment for mac and linux.
 2. `git pull origin master`
 3. `sudo sh link.sh`
 
-## vim only for linux
+## only vim
 
-1. `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/setup_vim_for_linux.sh)";`
-2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/install_vim_for_linux.sh)";`
+* centos
+  1. `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_centos.sh)";`
+  2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/install_vim_for_linux.sh)";`
+
+* debian
+  1. `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_debian.sh)";`
+  2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/linux/install_vim_for_linux.sh)";`
