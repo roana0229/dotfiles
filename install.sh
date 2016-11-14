@@ -37,11 +37,6 @@ echo "# Load terminal color profile in ~/osx-terminal.app-colors-solarized at Te
 echo "vim_path=\`brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//'\`" >> .zshenv;
 echo "export PATH=/\$vim_path/bin:\$PATH" >> .zshenv;
 
-echo "# install tmux-powerline"
-git clone https://github.com/erikw/tmux-powerline.git ~/tmux-powerline;
-cp -f ~/dotfiles/tmux/tmux-theme-default.sh ~/tmux-powerline/themes/default.sh;
-cp -f ~/dotfiles/tmux/weather.sh ~/tmux-powerline/segments/weather.sh;
-
 echo "# add zsh shells";
 sudo echo "/usr/local/bin/zsh" >> /etc/shells;
 
