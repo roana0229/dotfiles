@@ -111,6 +111,8 @@ alias rezshe='source ~/.zshenv'
 alias vimeuc='vim -c "e ++enc=euc-jp"'
 alias jsonp='python -m json.tool'
 alias jsonpj='python -c "import sys,json;print json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False)"'
+alias ts='tig status'
+alias adbrestart='adb kill-server;adb start-server'
 
 # generate password and copy to clipboard
 function createpw() {
