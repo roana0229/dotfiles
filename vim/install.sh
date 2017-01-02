@@ -8,4 +8,3 @@ mkdir -p ~/.vim/undo
 
 # clone vim color scheme
 git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
-

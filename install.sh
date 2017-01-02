@@ -1,44 +1,37 @@
 #!/bin/bash
 
-if [ "$(uname)" != 'Darwin' ]; then # OSX
-  echo "# This script can be run only on OSX";
+if [ "$(uname)" != 'Darwin' ]; then # macOS
+  echo "# This script can be run only on macOS";
   exit 1;
 fi
 
-echo "# install Homebrew";
+read -sp "Input root password: " PW
+echo
+
+echo ">>>>>>> Install Homebrew";
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
 brew update;
 brew doctor;
-brew install zsh git tig tmux caskroom/cask/brew-cask;
-brew install vim --with-lua;
+brew install fish peco git tig jq tmux reattach-to-user-namespace caskroom/cask/brew-cask;
+brew install vim --with-lua
+echo "<<<<<<<";
 
-echo "# install oh-my-zsh";
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
-
-echo "# install dotfiles";
-git clone https://github.com/roana0229/dotfiles.git ~/dotfiles;
-cp -f ~/dotfiles/simple-git.zsh-theme ~/.oh-my-zsh/themes/simple-git.zsh-theme;
-sh ~/dotfiles/link.sh;
-
-echo "# install NeoBundle";
-sh -c "$(curl -fsSL https://raw.github.com/Shougo/neobundle.vim/master/bin/install.sh)";
-
-# vim undo
-mkdir -p ~/.vim/undo;
-
-echo "# install vim color-solarized";
-git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle;
-
-echo "# install terminal color-solarized";
+echo ">>>>>>> Install 'terminal color-solarized'";
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/osx-terminal.app-colors-solarized;
-echo "\n### terminal color setting ###";
-echo "# Load terminal color profile in ~/osx-terminal.app-colors-solarized at Terminal Setting";
+echo "You must load 'color-solarized' in ~/osx-terminal.app-colors-solarized at Terminal Setting";
+echo "<<<<<<<";
 
-echo "vim_path=\`brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//'\`" >> .zshenv;
-echo "export PATH=/\$vim_path/bin:\$PATH" >> .zshenv;
-
-echo "# add zsh shells";
-sudo echo "/usr/local/bin/zsh" >> /etc/shells;
+echo ">>>>>>> Use 'fish-shell'";
+expect -c "
+  spawn sudo sh -c \"echo '/usr/local/bin/fish' >> /etc/shells;\"
+  expect \"Password:\"
+  send \"${PW}\n\"
+  spawn chsh -s /usr/local/bin/fish;
+  expect \"Password:\"
+  send \"${PW}\n\"
+"
+fish
+echo "<<<<<<<";
 
 echo "#######################################";
 echo " _____   _           _         _      ";
@@ -47,4 +40,3 @@ echo " | |_    | | | '_ \  | | / __| | '_ \ ";
 echo " |  _|   | | | | | | | | \__ \ | | | |";
 echo " |_|     |_| |_| |_| |_| |___/ |_| |_|";
 echo "#######################################";
-echo "######### You must exit once! #########";

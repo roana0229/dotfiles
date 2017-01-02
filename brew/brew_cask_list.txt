@@ -1,8 +1,6 @@
 android-studio
 atom
 bettertouchtool
-cocoapods
-dash
 dropbox
 firefox
 genymotion
