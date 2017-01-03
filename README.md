@@ -6,7 +6,7 @@ Easily to build a minimum of development environment for macOS.
 
 ## Install
 
-1. If you install for Mac, `xcode-select --install` after show dialog.
+1. `xcode-select --install`
 - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/install.sh)";`
 - `sh ~/dotfiles/link.sh;`
 - `sh ~/dotfiles/brew/install_brew_list.sh;`
