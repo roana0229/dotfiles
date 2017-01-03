@@ -9,7 +9,7 @@ read -sp "Input root password: " PW
 echo
 
 echo ">>>>>>> Install Homebrew";
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
+/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
 brew update;
 brew doctor;
 brew install fish peco git tig jq tmux reattach-to-user-namespace caskroom/cask/brew-cask;
