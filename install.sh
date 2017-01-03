@@ -24,11 +24,17 @@ echo "<<<<<<<";
 echo ">>>>>>> Use 'fish-shell'";
 expect -c "
   spawn sudo sh -c \"echo '/usr/local/bin/fish' >> /etc/shells;\"
-  expect \"Password:\"
-  send \"${PW}\n\"
+  expect {
+      \"Password:\" {
+          send \"${PW}\n\"
+      }
+  }
   spawn chsh -s /usr/local/bin/fish;
-  expect \"Password:\"
-  send \"${PW}\n\"
+  expect {
+      -regexp \"Password for .+:\" {
+          send \"${PW}\n\"
+      }
+  }
 "
 fish
 echo "<<<<<<<";
