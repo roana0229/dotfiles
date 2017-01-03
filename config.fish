@@ -11,8 +11,10 @@ end
 
 
 ### env
-set VIM_PATH (brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//')
-set PATH $VIM_PATH/bin $PATH
+if contains 'vim' (brew list)
+  set VIM_PATH (brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//')
+  set PATH $VIM_PATH/bin $PATH
+end
 set JAVA_HOME (/usr/libexec/java_home)
 set HOMEBREW_CASK_OPTS --appdir=/Applications
 set ANDROID_HOME ~/Library/Android/sdk
@@ -51,9 +53,13 @@ function fish_right_prompt
 end
 
 
-### Initialize
-status --is-interactive; and source (rbenv init -|psub)
-eval (direnv hook fish)
+### initialize
+if not test -z (which rbenv)
+  status --is-interactive; and source (rbenv init -|psub)
+end
+if not test -z (which direnv)
+  eval (direnv hook fish)
+end
 
 if test -z "$TMUX"
   tmux a >/dev/null 2>&1 # tmux環境でなければアタッチ
