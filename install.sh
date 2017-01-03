@@ -5,15 +5,15 @@ if [ "$(uname)" != 'Darwin' ]; then # macOS
   exit 1;
 fi
 
-read -sp "Input root password: " PW
-echo
+read -sp "Input root password: " PW;
+echo;
 
 echo ">>>>>>> Install Homebrew";
 /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
 brew update;
 brew doctor;
 brew install fish peco git tig jq tmux reattach-to-user-namespace caskroom/cask/brew-cask;
-brew install vim --with-lua
+brew install vim --with-lua;
 echo "<<<<<<<";
 
 echo ">>>>>>> Install 'terminal color-solarized'";
@@ -35,8 +35,8 @@ expect -c "
           send \"${PW}\n\"
       }
   }
-"
-fish
+";
+fish;
 echo "<<<<<<<";
 
 echo "#######################################";
