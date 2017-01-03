@@ -11,7 +11,7 @@ end
 
 
 ### env
-set VIM_PATH (brew info vim74 | grep /usr/local/Cellar/vim74/ | sed 's/ .*//')
+set VIM_PATH (brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//')
 set PATH $VIM_PATH/bin $PATH
 set JAVA_HOME (/usr/libexec/java_home)
 set HOMEBREW_CASK_OPTS --appdir=/Applications
