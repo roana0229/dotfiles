@@ -1,6 +1,8 @@
 ### alias
 alias ts='tig status'
 alias gco='git checkout'
+alias gcm='git commit -m'
+alias gce='git commit --allow-empty -m "initial commit"'
 alias vi='vim -u NONE --noplugin'
 
 
@@ -18,9 +20,11 @@ end
 set JAVA_HOME (/usr/libexec/java_home)
 set HOMEBREW_CASK_OPTS --appdir=/Applications
 set ANDROID_HOME ~/Library/Android/sdk
+set GOPATH $HOME
 set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $HOME/.nodebrew/current/bin $PATH
 set PATH ~/.rbenv/shims $PATH
+set PATH $GOPATH/bin $PATH
 
 
 ### prompt format
