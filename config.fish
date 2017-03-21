@@ -20,11 +20,9 @@ end
 set JAVA_HOME (/usr/libexec/java_home)
 set HOMEBREW_CASK_OPTS --appdir=/Applications
 set ANDROID_HOME ~/Library/Android/sdk
-set GOPATH $HOME
 set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $HOME/.nodebrew/current/bin $PATH
 set PATH ~/.rbenv/shims $PATH
-set PATH $GOPATH/bin $PATH
 
 
 ### prompt format
@@ -67,7 +65,7 @@ end
 
 if test -z "$TMUX"
   tmux a >/dev/null 2>&1 # tmux環境でなければアタッチ
-  if test -z "$TMUX"
-    tmux new-session # アタッチできていなければ新しくtmuxのセッションを作成
-  end
+  # if test -z "$TMUX"
+  #   tmux new-session # アタッチできていなければ新しくtmuxのセッションを作成
+  # end
 end
