@@ -14,16 +14,10 @@ Easily to build a minimum of development environment for macOS.
 
 ## Setup Vim
 
-- macOS
+- macOS with dein
   - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup.sh)";`
-- CentOS
-  - `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_centos.sh)";`
-  - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup.sh)";`
-- Debian
-  - `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup_debian.sh)";`
-  - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/setup.sh)";`
-
-After execute command `vim` and Install NeoBundle Plugin.
+- only minimum `.vimrc`
+  - `curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/vim/.vimrc_minimum > ~/.vimrc`
 
 ## Update
 

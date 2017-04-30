@@ -12,8 +12,7 @@ echo ">>>>>>> Install Homebrew";
 /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
 brew update;
 brew doctor;
-brew install fish peco git tig jq tmux reattach-to-user-namespace caskroom/cask/brew-cask;
-brew install vim --with-lua;
+brew install fish peco git tig jq vim@7.4 tmux reattach-to-user-namespace caskroom/cask/brew-cask;
 echo "<<<<<<<";
 
 echo ">>>>>>> Install 'terminal color-solarized'";
