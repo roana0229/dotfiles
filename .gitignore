@@ -1,7 +1,8 @@
-# Created by https://www.gitignore.io/api/osx
 
-### OSX ###
-.DS_Store
+# Created by https://www.gitignore.io/api/macos
+
+### macOS ###
+*.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -18,10 +19,13 @@ Icon
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
-.apdisk`
+.apdisk
+
+# End of https://www.gitignore.io/api/macos
