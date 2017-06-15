@@ -19,10 +19,11 @@ if contains 'vim' (brew list)
 end
 set JAVA_HOME (/usr/libexec/java_home)
 set HOMEBREW_CASK_OPTS --appdir=/Applications
-set ANDROID_HOME ~/Library/Android/sdk
+set ANDROID_HOME $HOME/Library/Android/sdk
 set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $HOME/.nodebrew/current/bin $PATH
-set PATH ~/.rbenv/shims $PATH
+set PATH $HOME/.rbenv/shims $PATH
+set PATH $HOME/.cargo/bin $PATH
 
 
 ### prompt format
