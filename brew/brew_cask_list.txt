@@ -1,3 +1,4 @@
+1password
 android-studio
 atom
 bettertouchtool
@@ -8,6 +9,7 @@ google-chrome
 google-japanese-ime
 gyazo
 insomniax
+java
 keyboard-cleaner
 microsoft-office-2011
 openoffice
