@@ -9,8 +9,7 @@ Easily to build a minimum of development environment for macOS.
 1. `xcode-select --install`
 - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/install.sh)";`
 - `sh ~/dotfiles/link.sh;`
-- `sh ~/dotfiles/brew/install_brew_list.sh;`
-- `sh ~/dotfiles/brew/install_brew_cask_list.sh;`
+- `sh ~/dotfiles/brew/install_formula.sh;`
 
 ## Setup Vim
 

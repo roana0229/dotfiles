@@ -9,7 +9,12 @@ google-japanese-ime
 gyazo
 insomniax
 keyboard-cleaner
+microsoft-office-2011
+openoffice
 skype
+slack
+th-makerx
 vagrant
 virtualbox
+vivaldi
 vlc
