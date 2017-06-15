@@ -23,7 +23,6 @@ set ANDROID_HOME $HOME/Library/Android/sdk
 set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $HOME/.nodebrew/current/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
-set PATH $HOME/.cargo/bin $PATH
 
 
 ### prompt format
