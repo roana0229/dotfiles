@@ -15,6 +15,8 @@ brew doctor;
 brew install fish peco git tig jq vim@7.4 tmux reattach-to-user-namespace caskroom/cask/brew-cask;
 echo "<<<<<<<";
 
+git clone git@github.com:roana0229/dotfiles.git ~/dotfiles
+
 echo ">>>>>>> Install 'terminal color-solarized'";
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/osx-terminal.app-colors-solarized;
 echo "You must load 'color-solarized' in ~/osx-terminal.app-colors-solarized at Terminal Setting";
