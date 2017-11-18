@@ -25,9 +25,11 @@ mpfr
 nodebrew
 oniguruma
 openssl
+pcre
 pcre2
 peco
 perl
+phantomjs
 pkg-config
 python
 rbenv
@@ -36,9 +38,12 @@ reattach-to-user-namespace
 ruby
 ruby-build
 sqlite
+swiftlint
+the_silver_searcher
 tig
 tmux
 tree
 vim@7.4
 x264
 xvid
+xz
