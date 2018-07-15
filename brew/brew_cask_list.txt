@@ -10,7 +10,6 @@ insomniax
 java
 keyboard-cleaner
 lepton
-microsoft-office-2011
 openoffice
 realm-browser
 sip
