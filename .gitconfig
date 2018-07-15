@@ -3,3 +3,5 @@
 	email = roana.enter@gmail.com
 [core]
 	editor = vim
+[ghq]
+	root = ~/gitfiles
