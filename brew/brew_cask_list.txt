@@ -12,6 +12,7 @@ keyboard-cleaner
 lepton
 openoffice
 realm-browser
+sequel-pro
 sip
 skype
 slack
@@ -19,5 +20,6 @@ th-makerx
 vagrant
 virtualbox
 virtualbox-extension-pack
+visual-studio-code
 vivaldi
 vlc

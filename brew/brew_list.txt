@@ -21,7 +21,9 @@ lame
 libevent
 libpng
 libyaml
+makedepend
 mpfr
+node-build
 nodebrew
 oniguruma
 openssl
@@ -30,6 +32,7 @@ pcre2
 peco
 perl
 phantomjs
+pidcat
 pkg-config
 python
 rbenv
@@ -38,12 +41,15 @@ reattach-to-user-namespace
 ruby
 ruby-build
 sqlite
+swagger-codegen
 swiftlint
 the_silver_searcher
 tig
 tmux
 tree
 vim@7.4
+watchman
 x264
 xvid
 xz
+yarn
