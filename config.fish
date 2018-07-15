@@ -13,6 +13,10 @@ function gi
   curl -L -s https://www.gitignore.io/api/$argv
 end
 
+function bc
+  bash -c $argv
+end
+
 
 ### env
 if contains 'vim' (brew list)
