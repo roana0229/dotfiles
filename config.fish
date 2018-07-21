@@ -28,7 +28,7 @@ set HOMEBREW_CASK_OPTS --appdir=/Applications
 set ANDROID_HOME $HOME/Library/Android/sdk
 set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $ANDROID_HOME/tools $PATH
-set PATH $HOME/.nodebrew/current/bin $PATH
+set PATH $HOME/.ndenv/shims $PATH
 set PATH $HOME/.rbenv/shims $PATH
 
 
@@ -61,10 +61,31 @@ function fish_right_prompt
   printf ''
 end
 
+### for `ndenv init -`
+function ndenv_init
+  set ndenv_path (echo ~/.ndenv/shims | cat)
+  echo -n "set -gx PATH $ndenv_path \$PATH"
+  echo '
+command ndenv rehash 2>/dev/null
+function ndenv
+  set command $argv[1]
+  set -e argv[1]
+
+  switch "$command"
+  case rehash shell
+    source (ndenv "sh-$command" $argv|psub)
+  case "*"
+    command ndenv "$command" $argv
+  end
+end'
+end
 
 ### initialize
 if not test -z (which rbenv)
   status --is-interactive; and source (rbenv init -|psub)
+end
+if not test -z (which ndenv)
+  status --is-interactive; and source (ndenv_init|psub)
 end
 if not test -z (which direnv)
   eval (direnv hook fish)
