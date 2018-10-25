@@ -23,7 +23,8 @@ if contains 'vim' (brew list)
   set VIM_PATH (brew info vim | grep /usr/local/Cellar/vim/ | sed 's/ .*//')
   set PATH $VIM_PATH/bin $PATH
 end
-set JAVA_HOME (/usr/libexec/java_home)
+set JAVA_HOME (/usr/libexec/java_home -v 1.8)
+set PATH $JAVA_HOME $PATH
 set HOMEBREW_CASK_OPTS --appdir=/Applications
 set ANDROID_HOME $HOME/Library/Android/sdk
 set PATH $ANDROID_HOME/platform-tools $PATH

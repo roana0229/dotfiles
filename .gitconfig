@@ -1,7 +1,7 @@
 [user]
-	name = Kaoru Tsutsumishita
-	email = roana.enter@gmail.com
+	useConfigOnly = true
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
 [ghq]
 	root = ~/gitfiles
