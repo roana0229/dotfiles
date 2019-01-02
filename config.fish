@@ -31,9 +31,9 @@ set PATH $ANDROID_HOME/emulator $PATH
 set PATH $ANDROID_HOME/tools $PATH
 set PATH $ANDROID_HOME/tools/bin $PATH
 set PATH $ANDROID_HOME/platform-tools $PATH
-set PATH $HOME/.ndenv/bin $PATH
 set PATH $HOME/.ndenv/shims $PATH
 set PATH $HOME/.rbenv/shims $PATH
+set MISC (ghq root)/(ghq list | grep roana0229/misc)
 
 
 ### prompt format
