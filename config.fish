@@ -27,8 +27,10 @@ set JAVA_HOME (/usr/libexec/java_home -v 1.8)
 set PATH $JAVA_HOME $PATH
 set HOMEBREW_CASK_OPTS --appdir=/Applications
 set ANDROID_HOME $HOME/Library/Android/sdk
-set PATH $ANDROID_HOME/platform-tools $PATH
+set PATH $ANDROID_HOME/emulator $PATH
 set PATH $ANDROID_HOME/tools $PATH
+set PATH $ANDROID_HOME/tools/bin $PATH
+set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $HOME/.ndenv/bin $PATH
 set PATH $HOME/.ndenv/shims $PATH
 set PATH $HOME/.rbenv/shims $PATH
