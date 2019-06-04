@@ -1,5 +1,7 @@
 [user]
 	useConfigOnly = true
+	email = roana.enter@gmail.com
+	name = roana0229
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
