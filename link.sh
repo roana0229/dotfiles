@@ -1,7 +1,4 @@
-#!/bin/bash
-
-ln -sf ~/dotfiles/config.fish ~/.config/fish/config.fish
-source ~/.config/fish/config.fish
+#!/bin/bash -eux
 
 for f in .??*
 do

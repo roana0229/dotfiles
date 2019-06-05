@@ -17,7 +17,6 @@ if dein#load_state('~/.vim/bundle')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('easymotion/vim-easymotion')
   call dein#add('tomtom/tcomment_vim')
 
   " You can specify revision/branch/tag.
@@ -75,19 +74,3 @@ nnoremap : ;
 
 " NERDTree
 noremap <C-t> :NERDTreeToggle<CR>
-
-" EasyMotion
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" Bi-directional find motion
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-s)
-" or
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-s2)
-
-" Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_keys='asdzxcqwefghvbnrtyjklmuiopASDZXCQWEFGHVBNRTYKLMIOP'
