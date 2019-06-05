@@ -1,5 +1,13 @@
 #!/bin/bash
 
 cd `dirname $0`
-brew install `cat brew_list.txt`;
+
+for line in `cat brew_list.txt`; do
+  if [ `which $line` ]; then 
+    brew upgrade $line
+  else
+    brew install $line
+  fi
+done
+
 brew cask install `cat brew_cask_list.txt`;

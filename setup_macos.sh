@@ -14,6 +14,16 @@ git clone git@github.com:roana0229/dotfiles.git ~/dotfiles;
 sh ~/dotfiles/link.sh;
 sh ~/dotfiles/brew/install_formula.sh;
 
+# for zsh
+npm install --global pure-prompt;
+
+# install dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/dotfiles/installer.sh;
+mkdir -p ~/.vim/bundle;
+sh ~/dotfiles/installer.sh ~/.vim/bundle;
+rm -f ~/dotfiles/installer.sh;
+
+# teminal color
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/dotfiles/osx-terminal.app-colors-solarized;
 echo "You must load 'color-solarized' in ~/dotfiles/osx-terminal.app-colors-solarized at Terminal Setting";
 
