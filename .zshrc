@@ -8,10 +8,10 @@ autoload -Uz colors
 colors
 
 # completion
-autoload -Uz compinit
-compinit
 ## zsh-completions (from Homebrew)
 fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -Uz compinit
+compinit
 
 # zstyle
 zstyle ':completion:*:default' menu select=1
