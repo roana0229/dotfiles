@@ -7,13 +7,8 @@ prompt pure
 autoload -Uz colors
 colors
 
-# completion
-## zsh-completions (from Homebrew)
-fpath=(/usr/local/share/zsh-completions $fpath)
-autoload -Uz compinit
-compinit
-
 # zstyle
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' menu select=1
 
 # hisotry
@@ -29,6 +24,12 @@ eval "$(ndenv init -)"
 eval "$(rbenv init - zsh)"
 eval "$(direnv hook zsh)"
 typeset -U PATH
+
+# completion
+## zsh-completions (from Homebrew)
+fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -Uz compinit
+compinit
 
 # customizes
 
@@ -49,3 +50,4 @@ alias gce='git commit --allow-empty -m "initial commit"'
 alias vi='vim -u NONE --noplugin'
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+
