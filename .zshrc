@@ -44,16 +44,29 @@ bindkey '^R' select_history
 function exec_fastlane() { if [[ -f fastlane/Fastfile ]] then bundle exec fastlane $(cat fastlane/Fastfile | grep ' lane :' | cut -d' ' -f4 | tr -d ':' | peco); zle reset-prompt; fi }
 zle -N exec_fastlane
 bindkey '^F' exec_fastlane
-
+### select git command
+function select_git() {
+  if [[ -d .git ]] then
+    BRANCH=`git symbolic-ref --short HEAD`
+    CMD_ARRAY=(
+      "tig status"
+      "git pull origin $BRANCH"
+      "git push origin $BRANCH"
+      "git checkout -b feature/"
+      "git reset --soft HEAD^"
+      "git checkout . && git clean -fd"
+      "git commit --allow-empty -m 'initial commit'"
+      )
+    IFS=$'\n'; BUFFER=`echo "${CMD_ARRAY[*]}" | peco`; CURSOR=$#BUFFER; zle reset-prompt;
+  fi
+}
+zle -N select_git
+bindkey '^G' select_git
 
 ## alias
 alias ll='ls -l'
 alias la='ls -la'
 alias ts='tig status'
-alias gco='git checkout'
-alias gce='git commit --allow-empty -m "initial commit"'
 alias vi='vim -u NONE --noplugin'
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
-alias gpush='git push origin $(git symbolic-ref --short HEAD)'
-alias gpull='git pull origin $(git symbolic-ref --short HEAD)'
