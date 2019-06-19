@@ -37,9 +37,14 @@ compinit
 ### create gitignore
 function gi() { curl -sLw "\n" https://www.gitignore.io/api/$@ ;}
 ### history with peco 
-function select-history() { BUFFER=`history -n 1 | tail -r | peco`; CURSOR=$#BUFFER; zle reset-prompt; }
-zle -N select-history
-bindkey '^R' select-history
+function select_history() { BUFFER=`history -n 1 | tail -r | peco`; CURSOR=$#BUFFER; zle reset-prompt; }
+zle -N select_history
+bindkey '^R' select_history
+### exec fastlane
+function exec_fastlane() { if [[ -f fastlane/Fastfile ]] then bundle exec fastlane $(cat fastlane/Fastfile | grep ' lane :' | cut -d' ' -f4 | tr -d ':' | peco); zle reset-prompt; fi }
+zle -N exec_fastlane
+bindkey '^F' exec_fastlane
+
 
 ## alias
 alias ll='ls -l'
