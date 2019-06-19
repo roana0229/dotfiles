@@ -50,4 +50,5 @@ alias gce='git commit --allow-empty -m "initial commit"'
 alias vi='vim -u NONE --noplugin'
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
-
+alias gpush='git push origin $(git symbolic-ref --short HEAD)'
+alias gpull='git pull origin $(git symbolic-ref --short HEAD)'
