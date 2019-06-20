@@ -41,7 +41,12 @@ function select_history() { BUFFER=`history -n 1 | tail -r | peco`; CURSOR=$#BUF
 zle -N select_history
 bindkey '^R' select_history
 ### exec fastlane
-function exec_fastlane() { if [[ -f fastlane/Fastfile ]] then bundle exec fastlane $(cat fastlane/Fastfile | grep ' lane :' | cut -d' ' -f4 | tr -d ':' | peco); zle reset-prompt; fi }
+function exec_fastlane() {
+  if [[ -f fastlane/Fastfile ]] then
+    CMD=`cat fastlane/Fastfile | grep ' lane :' | cut -d' ' -f4 | tr -d ':' | peco`
+    BUFFER="bundle exec fastlane $CMD"; CURSOR=$#BUFFER; zle reset-prompt;
+  fi
+}
 zle -N exec_fastlane
 bindkey '^F' exec_fastlane
 ### select git command
@@ -70,3 +75,4 @@ alias ts='tig status'
 alias vi='vim -u NONE --noplugin'
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias ws='open $(ls | grep .xcworkspace)'
