@@ -67,6 +67,23 @@ function select_git() {
 }
 zle -N select_git
 bindkey '^G' select_git
+### select Xcode command
+function select_xcode() {
+  if [[ -n `ls | grep .xcodeproj` ]] then
+    XCODEPROJ=`ls | grep .xcodeproj`
+    XCWORKSPACE=`ls | grep .xcworkspace`
+    CMD_ARRAY=(
+      "open $XCWORKSPACE"
+      "open $XCODEPROJ"
+      "bundle exec synx $XCODEPROJ"
+      "rm -rf ~/Library/Developer/Xcode/DerivedData/**"
+      "rm -rf ~/Library/Developer/Xcode/Archives/**"
+      )
+    IFS=$'\n'; BUFFER=`echo "${CMD_ARRAY[*]}" | peco`; CURSOR=$#BUFFER; zle reset-prompt;
+  fi
+}
+zle -N select_xcode
+bindkey '^X' select_xcode
 
 ## alias
 alias ll='ls -l'
