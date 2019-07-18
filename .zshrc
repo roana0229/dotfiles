@@ -1,5 +1,7 @@
 # pure (https://github.com/sindresorhus/pure)
-autoload -U promptinit; promptinit
+autoload -Uz vcs_info
+precmd () { vcs_info }
+autoload -Uz promptinit; promptinit
 PURE_PROMPT_SYMBOL='$'
 prompt pure
 
