@@ -15,6 +15,7 @@ sh ~/dotfiles/link.sh;
 sh ~/dotfiles/brew/install_formula.sh;
 
 # for zsh
+npm install -g npm;
 npm install --global pure-prompt;
 
 # install dein

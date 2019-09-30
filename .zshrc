@@ -1,8 +1,8 @@
 # pure (https://github.com/sindresorhus/pure)
-autoload -Uz vcs_info
-precmd () { vcs_info }
-autoload -Uz promptinit; promptinit
-PURE_PROMPT_SYMBOL='$'
+autoload -U promptinit; promptinit
+PURE_PROMPT_SYMBOL="$"
+PURE_GIT_PULL=1
+PURE_GIT_DELAY_DIRTY_CHECK=6
 prompt pure
 
 # color
