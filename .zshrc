@@ -56,9 +56,10 @@ function select_git() {
   if [[ -d .git ]] then
     BRANCH=`git symbolic-ref --short HEAD`
     CMD_ARRAY=(
-      "tig status"
       "git pull origin $BRANCH"
       "git push origin $BRANCH"
+      "git pull origin develop"
+      "git checkout develop"
       "git checkout -b feature/"
       "git reset --soft HEAD^"
       "git checkout . && git clean -fd"
