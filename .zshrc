@@ -1,9 +1,11 @@
-# pure (https://github.com/sindresorhus/pure)
-autoload -U promptinit; promptinit
-PURE_PROMPT_SYMBOL="$"
-PURE_GIT_PULL=1
-PURE_GIT_DELAY_DIRTY_CHECK=6
-prompt pure
+source ~/.git-prompt.sh
+setopt PROMPT_SUBST
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUPSTREAM=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+PROMPT='
+%F{yellow}%n%f %U%F{blue}%~%f%F{cyan}%u$(__git_ps1 " (%s)")%f
+$ '
 
 # color
 autoload -Uz colors
@@ -12,6 +14,12 @@ colors
 # zstyle
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' menu select=1
+
+# completion
+## zsh-completions (from Homebrew)
+fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -Uz compinit
+compinit
 
 # hisotry
 export HISTFILE=${HOME}/.zsh_history
@@ -26,12 +34,6 @@ eval "$(ndenv init -)"
 eval "$(rbenv init - zsh)"
 eval "$(direnv hook zsh)"
 typeset -U PATH
-
-# completion
-## zsh-completions (from Homebrew)
-fpath=(/usr/local/share/zsh-completions $fpath)
-autoload -Uz compinit
-compinit
 
 # customizes
 

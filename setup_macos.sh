@@ -11,12 +11,11 @@ brew doctor;
 brew install reattach-to-user-namespace caskroom/cask/brew-cask;
 
 git clone git@github.com:roana0229/dotfiles.git ~/dotfiles;
-sh ~/dotfiles/link.sh;
-sh ~/dotfiles/brew/install_formula.sh;
+~/dotfiles/link.sh;
+~/dotfiles/brew/install_formula.sh;
 
-# for zsh
-npm install -g npm;
-npm install --global pure-prompt;
+# for prompt
+cp /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
 
 # install dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/dotfiles/installer.sh;
