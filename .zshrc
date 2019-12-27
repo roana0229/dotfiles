@@ -30,7 +30,7 @@ setopt extended_history
 setopt hist_ignore_dups
 
 # other
-eval "$(ndenv init -)"
+eval "$(nodenv init -)"
 eval "$(rbenv init - zsh)"
 eval "$(direnv hook zsh)"
 typeset -U PATH
