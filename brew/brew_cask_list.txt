@@ -1,6 +1,5 @@
 1password
 android-studio
-atom
 bettertouchtool
 dropbox
 google-chrome
@@ -11,10 +10,8 @@ java
 keyboard-cleaner
 microsoft-office-2011
 obs
-openoffice
 react-native-debugger
 realm-browser
-sequel-pro
 sip
 slack
 tableplus
