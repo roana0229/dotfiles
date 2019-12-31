@@ -15,7 +15,7 @@ git clone git@github.com:roana0229/dotfiles.git ~/dotfiles;
 ~/dotfiles/brew/install_formula.sh;
 
 # for prompt
-cp /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
+cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
 
 # install dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/dotfiles/installer.sh;
