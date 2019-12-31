@@ -16,6 +16,7 @@ git clone git@github.com:roana0229/dotfiles.git ~/dotfiles;
 
 # for prompt
 cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
+chmod 755 /usr/local/share
 
 # install dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/dotfiles/installer.sh;
