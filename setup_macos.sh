@@ -5,18 +5,25 @@ if [ "$(uname)" != 'Darwin' ]; then # macOS
   exit 1;
 fi
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
-brew update;
-brew doctor;
-brew install reattach-to-user-namespace caskroom/cask/brew-cask;
+if [ ! -d /Applications/Xcode.app ]; then
+  echo '# Install Xcode.app from App Store or Developer Site'
+  exit 1;
+fi
 
-git clone git@github.com:roana0229/dotfiles.git ~/dotfiles;
-~/dotfiles/link.sh;
-~/dotfiles/brew/install_formula.sh;
+xcode-select --print-path;
+xcode-select --switch /Applications/Xcode.app;
 
 # for prompt
 cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
 chmod 755 /usr/local/share
+
+git clone git@github.com:roana0229/dotfiles.git ~/dotfiles;
+~/dotfiles/link.sh;
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
+brew update;
+brew doctor;
+brew install caskroom/cask/brew-cask;
 
 # install dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/dotfiles/installer.sh;
