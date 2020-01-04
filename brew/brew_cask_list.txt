@@ -1,4 +1,5 @@
 1password
+adoptopenjdk8
 android-studio
 bettertouchtool
 dropbox
@@ -6,12 +7,11 @@ google-chrome
 google-japanese-ime
 gyazo
 keyboard-cleaner
+react-native-debugger
 sip
 slack
 tableplus
 th-makerx
 vagrant
-virtualbox
-virtualbox-extension-pack
 visual-studio-code
 vlc
