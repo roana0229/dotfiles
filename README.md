@@ -1,9 +1,9 @@
 ## Setup on macOS
 
-1. prepare `.ssh`.
-2. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_macos.sh)";`
-3. install `Xcode.app`
-4. `xcode-select --print-path && xcode-select --switch /Applications/Xcode.app`
+1. Prepare `.ssh`.
+2. Install `Xcode.app` from App Store or Developer Site.
+3. `xcode-select --print-path && xcode-select --switch /Applications/Xcode.app`
+4. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_macos.sh)";`
 
 ## Setup only vim
 
