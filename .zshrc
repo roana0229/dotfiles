@@ -54,6 +54,15 @@ function exec_fastlane() {
 zle -N exec_fastlane
 bindkey '^F' exec_fastlane
 ### select git command
+# https://qiita.com/pocari/items/8eed4e1f8c138fff3058
+function peco-checkout-github-pr() {
+  local selected_buffer=$(hub pr list -s open -L 20 --format='%t :%H :%I%n' | peco --prompt 'pull requests>')
+  if [ -n "$selected_buffer" ]; then
+    local pr_no=$(echo $selected_buffer | awk -F":" '{print $NF}')
+    hub pr checkout $pr_no
+  fi
+}
+
 function select_git() {
   if [[ -d .git ]] then
     BRANCH=`git symbolic-ref --short HEAD`
@@ -61,6 +70,7 @@ function select_git() {
       "git pull origin $BRANCH"
       "git push origin $BRANCH"
       "git pull origin develop"
+      "peco-checkout-github-pr"
       "git checkout develop"
       "git checkout -b feature/"
       "git reset --soft HEAD^"
