@@ -55,11 +55,14 @@ zle -N exec_fastlane
 bindkey '^F' exec_fastlane
 ### select git command
 # https://qiita.com/pocari/items/8eed4e1f8c138fff3058
-function peco-checkout-github-pr() {
-  local selected_buffer=$(hub pr list -s open -L 20 --format='%t :%H :%I%n' | peco --prompt 'pull requests>')
+function peco-checkout() {
+  local branches=$(hub pr list -s open -L 20 --format='%t :%H%n'; echo 'Master :master'; echo 'Develop :develop')
+  local selected_buffer=$(echo $branches | peco --prompt 'checkout branch>')
   if [ -n "$selected_buffer" ]; then
-    local pr_no=$(echo $selected_buffer | awk -F":" '{print $NF}')
-    hub pr checkout $pr_no
+    local target=$(echo $selected_buffer | awk -F":" '{print $NF}')
+    git fetch origin $target
+    git checkout $target
+    git pull origin $target
   fi
 }
 
@@ -70,8 +73,7 @@ function select_git() {
       "git pull origin $BRANCH"
       "git push origin $BRANCH"
       "git pull origin develop"
-      "peco-checkout-github-pr"
-      "git checkout develop"
+      "peco-checkout"
       "git checkout -b feature/"
       "git reset --soft HEAD^"
       "git checkout . && git clean -fd"
