@@ -70,14 +70,14 @@ function select_git() {
   if [[ -d .git ]] then
     BRANCH=`git symbolic-ref --short HEAD`
     CMD_ARRAY=(
+      "peco-checkout"
+      "git checkout -b feature/"
+      "git commit --allow-empty -m 'initial commit'"
       "git pull origin $BRANCH"
       "git push origin $BRANCH"
       "git pull origin develop"
-      "peco-checkout"
-      "git checkout -b feature/"
       "git reset --soft HEAD^"
       "git checkout . && git clean -fd"
-      "git commit --allow-empty -m 'initial commit'"
       )
     IFS=$'\n'; BUFFER=`echo "${CMD_ARRAY[*]}" | peco`; CURSOR=$#BUFFER; zle reset-prompt;
   fi
