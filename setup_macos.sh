@@ -1,35 +1,35 @@
-#!/bin/bash -eux
+#!/bin/bash
 
 if [ "$(uname)" != 'Darwin' ]; then # macOS
-  echo "# This script can be run only on macOS";
+  echo "! This script can be run only on macOS";
   exit 1;
 fi
 
 if [ ! -d /Applications/Xcode.app ]; then
-  echo '# Install Xcode.app from App Store or Developer Site'
+  echo '! require Xcode.app';
   exit 1;
 fi
 
-xcode-select --print-path;
-xcode-select --switch /Applications/Xcode.app;
+if ! [ -x "$(command -v brew)" ]; then
+  echo '! require `brew` command';
+  exit 1;
+fi
 
-# for prompt
+set -eux
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew doctor
+brew install git gh hub ghq peco jq tig openssl the_silver_searcher oath-toolkit zsh-completions
+brew install python@3.9 nodenv node-build rbenv ruby-build direnv
+brew cask install google-japanese-ime visual-studio-code
+rm -f ~/.zcompdump; compinit
+
 cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
 chmod 755 /usr/local/share
 
-git clone git@github.com:roana0229/dotfiles.git ~/dotfiles;
-~/dotfiles/link.sh;
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)";
-brew update;
-brew doctor;
-brew install caskroom/cask/brew-cask;
-
-# install dein
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/dotfiles/installer.sh;
-mkdir -p ~/.vim/bundle;
-sh ~/dotfiles/installer.sh ~/.vim/bundle;
-rm -f ~/dotfiles/installer.sh;
+curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/.zshrc > ~/.zshrc
+curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/.zshenv > ~/.zshenv
+curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/.vimrc > ~/.vimrc
 
 # teminal color
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized ~/dotfiles/osx-terminal.app-colors-solarized;

@@ -1,14 +1,14 @@
-## Setup on macOS
+# Setup on macOS
 
-1. Prepare `.ssh`.
-2. Install `Xcode.app` from App Store or Developer Site.
-3. `xcode-select --print-path && xcode-select --switch /Applications/Xcode.app`
+1. prepare `.ssh`
+2. install `Xcode` from [Developer Site](https://developer.apple.com/download/more/?=xcode)
+3. run command for Xcode CommandLine Tools
+```
+sudo xcode-select --switch /Applications/Xcode.app
+sudo xcodebuild -license
+sudo xcode-select --install
+```
+
 4. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_macos.sh)";`
 
-### brew applications
-
-1. `~/dotfiles/brew/install_formula.sh`
-
-## Setup only vim
-
-1. `curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/.vimrc_minimum > ~/.vimrc`
+5. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_git.sh)";`

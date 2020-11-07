@@ -1,3 +1,4 @@
+# prompt
 source ~/.git-prompt.sh
 setopt PROMPT_SUBST
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -7,10 +8,6 @@ PROMPT='
 %F{yellow}%n%f %U%F{blue}%~%f%F{cyan}%u$(__git_ps1 " (%s)")%f
 $ '
 
-# color
-autoload -Uz colors
-colors
-
 # zstyle
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' menu select=1
@@ -18,10 +15,9 @@ zstyle ':completion:*:default' menu select=1
 # completion
 ## zsh-completions (from Homebrew)
 fpath=(/usr/local/share/zsh-completions $fpath)
-autoload -Uz compinit
-compinit
+autoload -U compinit
+compinit -u
 
-# hisotry
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=100000
@@ -29,18 +25,10 @@ setopt share_history
 setopt extended_history
 setopt hist_ignore_dups
 
-# other
-eval "$(nodenv init -)"
-eval "$(rbenv init - zsh)"
-eval "$(direnv hook zsh)"
-typeset -U PATH
-
-# customizes
-
 ## function
 ### create gitignore
 function gi() { curl -sLw "\n" https://www.gitignore.io/api/$@ ;}
-### history with peco 
+### history with peco
 function select_history() { BUFFER=`history -n 1 | tail -r | peco`; CURSOR=$#BUFFER; zle reset-prompt; }
 zle -N select_history
 bindkey '^R' select_history
@@ -53,15 +41,16 @@ function exec_fastlane() {
 }
 zle -N exec_fastlane
 bindkey '^F' exec_fastlane
+
 ### select git command
 # https://qiita.com/pocari/items/8eed4e1f8c138fff3058
-function peco-checkout() {
+function peco-switch() {
   local branches=$(hub pr list -s open -L 20 --format='%t :%H%n'; echo 'Master :master'; echo 'Develop :develop')
   local selected_buffer=$(echo $branches | peco --prompt 'checkout branch>')
   if [ -n "$selected_buffer" ]; then
     local target=$(echo $selected_buffer | awk -F":" '{print $NF}')
     git fetch origin $target
-    git checkout $target
+    git switch $target
     git pull origin $target
   fi
 }
@@ -70,12 +59,13 @@ function select_git() {
   if [[ -d .git ]] then
     BRANCH=`git symbolic-ref --short HEAD`
     CMD_ARRAY=(
-      "peco-checkout"
-      "git checkout -b feature/"
+      "peco-switch"
+      "git switch -c"
       "git commit --allow-empty -m 'initial commit'"
+      "git pull --rebase origin $BRANCH"
+      "git push --force-with-lease origin $BRANCH"
       "git pull origin $BRANCH"
       "git push origin $BRANCH"
-      "git pull origin develop"
       "git reset --soft HEAD^"
       "git checkout . && git clean -fd"
       )
@@ -84,6 +74,7 @@ function select_git() {
 }
 zle -N select_git
 bindkey '^G' select_git
+
 ### select Xcode command
 function select_xcode() {
   if [[ -n `ls | grep .xcodeproj` ]] then
@@ -92,7 +83,7 @@ function select_xcode() {
     CMD_ARRAY=(
       "open $XCWORKSPACE"
       "open $XCODEPROJ"
-      "bundle exec synx $XCODEPROJ"
+      "xcrun -k && xcodebuild -alltargets clean"
       "rm -rf ~/Library/Developer/Xcode/DerivedData/**"
       "rm -rf ~/Library/Developer/Xcode/Archives/**"
       )
@@ -110,3 +101,8 @@ alias vi='vim -u NONE --noplugin'
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias adbsc='adb shell screencap -p /sdcard/screen.png && adb pull /sdcard/screen.png ~/Desktop/`date +%Y%m%d_%I%M%S`.png && adb shell rm /sdcard/screen.png'
+
+# other
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
+eval "$(direnv hook zsh)"
