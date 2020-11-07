@@ -8,5 +8,6 @@ set -eux
 git config --global user.name $NAME
 git config --global user.email $EMAIL
 git config --global core.editor vim
+git config --global pull.rebase false
 curl -sLw "\n" https://www.gitignore.io/api/macos > ~/.gitignore_global
 git config --global core.excludesFile ~/.gitignore_global
