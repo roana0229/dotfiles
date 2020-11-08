@@ -9,6 +9,12 @@ sudo xcodebuild -license
 sudo xcode-select --install
 ```
 
-4. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_macos.sh)";`
+4. run command for [Homebrew](https://brew.sh/index_ja)
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew doctor
+```
 
-5. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_git.sh)";`
+5. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_macos.sh)";`
+
+6. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/roana0229/dotfiles/master/setup_git.sh)";`
