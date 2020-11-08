@@ -17,8 +17,6 @@ fi
 
 set -eux
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew doctor
 brew install git gh hub ghq peco jq tig openssl the_silver_searcher oath-toolkit zsh-completions
 brew install python@3.9 nodenv node-build rbenv ruby-build direnv
 brew cask install google-japanese-ime visual-studio-code
