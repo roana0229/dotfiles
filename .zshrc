@@ -60,12 +60,11 @@ function select_git() {
     BRANCH=`git symbolic-ref --short HEAD`
     CMD_ARRAY=(
       "peco-switch"
-      "git switch -c"
       "git commit --allow-empty -m 'initial commit'"
-      "git pull --rebase origin $BRANCH"
-      "git push --force-with-lease origin $BRANCH"
       "git pull origin $BRANCH"
       "git push origin $BRANCH"
+      "git pull --rebase origin $BRANCH"
+      "git push --force-with-lease origin $BRANCH"
       "git reset --soft HEAD^"
       "git checkout . && git clean -fd"
       )
